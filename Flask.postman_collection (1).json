@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "d7669990-55a7-40eb-8045-2ef995c5b52c",
+		"name": "Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18583703"
+	},
+	"item": [
+		{
+			"name": "Institucion",
+			"item": [
+				{
+					"name": "Crear Institucion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"nombre\": \"Institución 31\",\r\n    \"descripcion\": \"Descripcion de la Institución 3\",\r\n    \"direccion\": \"Santiago Maipú\",\r\n    \"fecha_creacion\":\"2020-09-12\" \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/crear/institucion",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"crear",
+								"institucion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Instituciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/instituciones",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"instituciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Institucion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"nombre\": \"Institución 3\",\r\n    \"descripcion\": \"Descripcion de la Institución 3\",\r\n    \"direccion\": \"Santiago Maipú\",\r\n    \"fecha_creacion\":\"2020-09-12\" \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/institucion/1/actualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institucion",
+								"1",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Institucion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/institucion/1/actualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institucion",
+								"1",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar dirección Instituciones y link google maps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/instituciones/maps",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"instituciones",
+								"maps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Proyectos de una Institución",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/institucion/1/proyectos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institucion",
+								"1",
+								"proyectos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proyecto",
+			"item": [
+				{
+					"name": "Crear Proyecto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"nombre\": \"Proyecto 4\",\r\n    \"descripcion\": \"Descripción Proyecto 4\",\r\n    \"fecha_inicio\": \"2022-02-02\",\r\n    \"fecha_termino\": \"2023-02-02\",\r\n    \"usuario_id\": 1,\r\n    \"institucion_id\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/crear/proyecto",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"crear",
+								"proyecto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar nombre Proyectos y dias termino",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/proyectos/termino",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"proyectos",
+								"termino"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Proyectos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/proyectos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"proyectos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"apellidos\": \"Carreños Navarros\",\r\n    \"cargo\": \"ing. Informático\",\r\n    \"edad\": 25,\r\n    \"fecha_de_nacimiento\": \"1998-07-17\",\r\n    \"nombre\": \"Bastian Ignacio\",\r\n    \"rut\": \"199048\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/usuario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellidos\": \"Navarro Carreño\",\r\n    \"cargo\": \"ing. Informático\",\r\n    \"edad\": 22,\r\n    \"fecha_de_nacimiento\": \"1998-07-17\",\r\n    \"nombre\": \"Ignacio Ignacio\",\r\n    \"rut\": \"199048\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/actualizar/usuario/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actualizar",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/eliminar/usuario/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"eliminar",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/usuarios",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Proyectos de los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/usuario/199048/proyectos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"usuario",
+								"199048",
+								"proyectos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/ver/usuario/199048",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ver",
+								"usuario",
+								"199048"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
