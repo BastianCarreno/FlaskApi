@@ -131,6 +131,14 @@ def crear_institucion_proyectos_usuario():
     return {"Estado": "Exito"}
 
 
+"""
+    {
+    "nombre": "Institución 1",
+    "descripcion": "Descripcion de la Institución 1",
+    "direccion": "Santiago Maipú",
+    "fecha_creacion":"2020-09-12" 
+    }
+"""
 # Creacion de Institucion
 @institucion.route("/crear/institucion", methods=["POST"])
 def crear_institucion():
@@ -145,7 +153,7 @@ def crear_institucion():
     if not nombre or not direccion or not fecha_creacion or not descripcion:
         return (
             jsonify(
-                {"error": "Faltan datos para crear la institución y los proyectos"}
+                {"error": "Faltan datos para crear la institución"}
             ),
             400,
         )
